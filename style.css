@@ -1,0 +1,315 @@
+@font-face {
+    font-family: "Gllasken";
+    src: url("./Gllasken-BF67ad0e06bb8a3.ttf");
+}
+
+@font-face {
+    font-family: "Nothern";
+    src: url("./NorthenGlitch-BF67ad0c351ddba.otf");
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Gilroy;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+}
+
+header{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    color: white;
+}
+
+header video{
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+}
+
+.top-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4vh 3vw;
+}
+
+.top-box h1{
+    font-family: "Gllasken";
+    font-size: 1.5rem;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.top-box h1 span{
+    display: inline-block;
+    font-family: "Gllasken";
+}
+
+.hide{
+    opacity: 0;
+}
+
+.top-line{
+    width: 90%;
+    height: 1px;
+    background-color: white;
+    position: relative;
+    left: 5%;
+}
+
+.middle{
+    padding: 12vh 3vw;
+}
+
+.middle i{
+    margin-right: 14vw;
+}
+
+.expand{
+    opacity: 1;
+}
+
+.shrink{
+    opacity: 0;
+}
+
+.middle h1{
+    font-family: "Nothern";
+    font-size: 6rem;
+}
+
+.middle h1 span{
+    display: inline-block;
+    font-family: "Nothern";
+}
+
+.quote{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 3vw;
+}
+
+.quote h1{
+    font-family: "Gllasken";
+    font-size: 1.5rem;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+.quote h1 span{
+    display: inline-block;
+    font-family: "Gllasken";
+}
+
+#pro-pic{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle{
+    height: 10rem;
+    width: 10rem;
+    left: 2rem;
+    background-color: white;
+}
+
+.aboutMeText{
+    padding: 5vh 3vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 10;
+}
+
+.aboutMeText p{
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
+#nav{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5vh 4vw;
+}
+
+#nav h3{
+    background-color: black;
+    color: white;
+    padding: 10px 25px;
+    margin-left: 5px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+#intro{
+    height: 45%;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1628270680011-41792b21de87?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    /* background-color: bisque; */
+    background-size: cover;
+    padding: 70px 50px;
+}
+
+#intro h1{
+    font-size: 100px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    font-family: "Futura";
+}
+
+#place{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-top: 40px; */
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+#place h3, h4{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Gllasken";
+    overflow: hidden;
+}
+
+#place h3 span{
+    display: inline-block;
+    font-family: "Gllasken";
+}
+
+#place h4 span {
+    display: inline-block;
+    font-family: "Gllasken";
+}
+
+#pro-pic{
+    height: 100%;
+    width: 100%;
+    /* background-color: orange; */
+    background-image: url(https://images.unsplash.com/photo-1509549649946-f1b6276d4f35?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+}
+
+#about{
+    height: 65%;
+    width: 100%;
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 50px;
+    background-image: url(https://images.unsplash.com/photo-1542297796-5309338c2570?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+}
+
+#about h2{
+    width: 62%;
+    letter-spacing: -4px;
+    font-size: 80px;
+    line-height: 75px;
+    font-weight: 600;
+}
+
+#about-part2{
+    width: 35%;
+    height: 100%;
+    border-left: 2px solid black;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#about-part2 h3{
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#icons i{
+    font-size: 40px;
+    padding: 5px 12px;
+}
+
+#work{
+    height: 55%;
+    width: 100%;
+    /* background-color: bisque; */
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 50px;
+    background-image: url(https://images.unsplash.com/photo-1614170099583-1f4b064fe55b?q=80&w=1958&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+}
+
+#work1{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-right: 2px solid black;
+    padding-right: 50px;
+}
+
+#work1 h3, i{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#work2{
+    width: 70%;
+    height: 100%;
+    padding: 0px 50px;
+}
+
+.work2-part{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 0px;
+}
+
+.work2-part:nth-child(1) {
+    border-bottom: 2px solid black;
+}
+
+.work2-part .elem{
+    width: 50%;
+    height: 100%;
+}
+
+.work2-part .elem:nth-child(1){
+    border-right: 2px solid black;
+}
+
+.work2-part .elem:nth-child(2) {
+    padding-left: 50px;
+}
