@@ -160,7 +160,49 @@ function middleTextAnim(){
     })
 }
 
-    
+
+document.addEventListener("DOMContentLoaded", () => {
+    const slideshow = document.querySelector(".img-gallery");
+    let slides = Array.from(document.querySelectorAll(".image"));
+
+    // Set initial z-index to stack images
+    slides.forEach((slide, index) => {
+        slide.style.zIndex = slides.length - index;
+    });
+
+    function moveToNextSlide() {
+        let topSlide = slides[0]; // Get the topmost image
+
+        gsap.to(topSlide, {
+            scale: 0.1,
+            opacity: 0,
+            duration: 1,
+            ease: "power2.inOut",
+            onComplete: () => {
+                // Reset and move the image to the back
+                topSlide.style.opacity = 1;
+                topSlide.style.transform = "scale(1)";
+                slideshow.appendChild(topSlide); // Moves it to the last position
+
+                // Update the slides array order dynamically
+                slides = Array.from(document.querySelectorAll(".image"));
+
+                // Reset z-index for correct stacking order
+                slides.forEach((slide, index) => {
+                    slide.style.zIndex = slides.length - index;
+                });
+            }
+        });
+    }
+
+    // Click event to transition images
+    slideshow.addEventListener("click", moveToNextSlide);
+
+    // Auto slideshow every 3 seconds
+    // setInterval(moveToNextSlide, 3000);
+});
+
+
 
     
     
