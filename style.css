@@ -42,7 +42,8 @@ header video{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 4vh 3vw;
+    padding: 0 3vw;
+    padding-top: 4vh;
 }
 
 .top-box h1{
@@ -62,15 +63,27 @@ header video{
 }
 
 .top-line{
-    width: 90%;
-    height: 1px;
-    background-color: white;
-    position: relative;
-    left: 5%;
+    width: 100%;
+    height: 100px;
+}
+
+svg{
+    width: 100%;
+    height: 100px;
+}
+
+.top-line2 {
+    width: 100%;
+    height: 100px;
+}
+
+.svg2 {
+    width: 100%;
+    height: 100px;
 }
 
 .middle{
-    padding: 12vh 3vw;
+    padding: 0vh 3vw;
 }
 
 .middle i{
@@ -99,7 +112,7 @@ header video{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10vh 3vw;
+    padding: 3vh 3vw;
 }
 
 .quote h1{
@@ -203,10 +216,16 @@ img {
     font-weight: 600;
 }
 
+#about .svg3{
+    height: 100%;
+    width: 200px;
+    /* z-index: -2; */
+}
+
 #about-part2{
     width: 38%;
     height: 100%;
-    border-left: 2px solid black;
+    /* border-left: 2px solid black; */
     padding: 5vh 5vw;
     display: flex;
     flex-direction: column;
@@ -233,8 +252,8 @@ img {
     height: 75%;
     width: 100%;
     /* background-color: bisque; */
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    /* border-top: 2px solid black; */
+    /* border-bottom: 2px solid black; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -243,13 +262,19 @@ img {
     background-size: cover;
 }
 
+#work .svg5 {
+    height: 100%;
+    width: 200px;
+    /* z-index: -2; */
+}
+
 #work1{
     width: 30%;
     height: 100%;
     display: flex;
     justify-content: space-between;
-    border-right: 2px solid black;
-    padding-right: 50px;
+    /* border-right: 2px solid black; */
+    /* padding-right: 50px; */
 }
 
 #work1 h3, i{
@@ -261,18 +286,17 @@ img {
 #work2{
     width: 70%;
     height: 100%;
-    padding: 4vh 3vw;
+    padding: 4vh 0vw;
 }
 
 .work2-part{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 4.5vh 0px;
 }
 
 .work2-part:nth-child(1) {
-    border-bottom: 2px solid black;
+    /* border-bottom: 2px solid black; */
 }
 
 .work2-part .elem{

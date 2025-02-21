@@ -202,6 +202,146 @@ document.addEventListener("DOMContentLoaded", () => {
     // setInterval(moveToNextSlide, 3000);
 });
 
+var initialPath = "M 100 90 Q 750 90 1400 90";
+var finalPath = "M 100 50 Q 750 50 1400 50";
+var string = document.querySelector(".top-line")
+string.addEventListener("mousemove", function(dets){
+    path = `M 100 50 Q ${dets.x} ${dets.y} 1400 50`
+    gsap.to(".svg1 .path1", {
+        attr: {d:path},
+        duration: 0.2,
+        ease: "power3.out",
+    })
+})
+string.addEventListener("mouseleave", function(dets){
+    gsap.to(".svg1 .path1", {
+        attr: {d:finalPath},
+        duration: 1.5,
+        ease: "elastic.out(1, 0.2)",
+    })
+})
+
+var string = document.querySelector(".top-line2")
+string.addEventListener("mousemove", function(dets){
+    path = `M 100 50 Q ${dets.x} ${dets.y} 1400 50`
+    gsap.to(".svg2 .path2", {
+        attr: {d:path},
+        duration: 0.2,
+        ease: "power3.out",
+    })
+})
+string.addEventListener("mouseleave", function(dets){
+    gsap.to(".svg2 .path2", {
+        attr: {d:finalPath},
+        duration: 1.5,
+        ease: "elastic.out(1, 0.2)",
+    })
+})
+
+var string = document.querySelector(".top-line3")
+string.addEventListener("mousemove", function(dets){
+    path = `M 100 50 Q ${dets.x} ${dets.y} 1400 50`
+    gsap.to(".svg4 .path4", {
+        attr: {d:path},
+        duration: 0.2,
+        ease: "power3.out",
+    })
+})
+string.addEventListener("mouseleave", function(dets){
+    gsap.to(".svg4 .path4", {
+        attr: {d:finalPath},
+        duration: 1.5,
+        ease: "elastic.out(1, 0.2)",
+    })
+})
+
+var string = document.querySelector(".top-line4")
+string.addEventListener("mousemove", function(dets){
+    path = `M 100 50 Q ${dets.x} ${dets.y} 1400 50`
+    gsap.to(".svg4 .path4", {
+        attr: {d:path},
+        duration: 0.2,
+        ease: "power3.out",
+    })
+})
+string.addEventListener("mouseleave", function(dets){
+    gsap.to(".svg4 .path4", {
+        attr: {d:finalPath},
+        duration: 1.5,
+        ease: "elastic.out(1, 0.2)",
+    })
+})
+
+var string = document.querySelector(".top-line5")
+string.addEventListener("mousemove", function(dets){
+    path = `M 100 50 Q ${dets.x} ${dets.y} 1400 50`
+    gsap.to(".svg7 .path7", {
+        attr: {d:path},
+        duration: 0.2,
+        ease: "power3.out",
+    })
+})
+string.addEventListener("mouseleave", function(dets){
+    gsap.to(".svg7 .path7", {
+        attr: {d:finalPath},
+        duration: 1.5,
+        ease: "elastic.out(1, 0.2)",
+    })
+})
+
+var finalPathBelow = "M 20 50 Q 750 50 800 50"
+var string = document.querySelector(".top-line4")
+string.addEventListener("mousemove", function(dets){
+    path = `M 10 50 Q ${dets.x} ${dets.y} 800 50`
+    gsap.to(".svg6 .path6", {
+        attr: {d:path},
+        duration: 0.2,
+        ease: "power3.out",
+    })
+})
+string.addEventListener("mouseleave", function(dets){
+    gsap.to(".svg6 .path6", {
+        attr: {d:finalPathBelow},
+        duration: 1.5,
+        ease: "elastic.out(1, 0.2)",
+    })
+})
+
+var finalPathSvg3 = "M 100 0 Q 100 10 100 760"
+var string = document.querySelector(".svg3")
+string.addEventListener("mousemove", function(dets){
+    path = `M 100 0 Q ${dets.y} ${dets.x} 100 760`
+    gsap.to(".svg3 .path3", {
+        attr: {d:path},
+        duration: 0.2,
+        ease: "power3.out",
+    })
+})
+string.addEventListener("mouseleave", function(dets){
+    gsap.to(".svg3 .path3", {
+        attr: {d:finalPathSvg3},
+        duration: 1.5,
+        ease: "elastic.out(1, 0.2)",
+    })
+})
+
+var string = document.querySelector(".svg5")
+string.addEventListener("mousemove", function(dets){
+    path = `M 100 0 Q ${dets.y} ${dets.x} 100 760`
+    gsap.to(".svg5 .path5", {
+        attr: {d:path},
+        duration: 0.2,
+        ease: "power3.out",
+    })
+})
+string.addEventListener("mouseleave", function(dets){
+    gsap.to(".svg5 .path5", {
+        attr: {d:finalPathSvg3},
+        duration: 1.5,
+        ease: "elastic.out(1, 0.2)",
+    })
+})
+
 
 
     
