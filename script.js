@@ -255,7 +255,7 @@ string.addEventListener("mouseleave", function(dets){
     })
 })
 
-var string = document.querySelector(".top-line4")
+// var string = document.querySelector(".top-line4")
 string.addEventListener("mousemove", function(dets){
     path = `M 100 50 Q ${dets.x} ${dets.y} 1400 50`
     gsap.to(".svg4 .path4", {
@@ -342,12 +342,290 @@ string.addEventListener("mouseleave", function(dets){
     })
 })
 
+function aboutPageAnim(){
+    var tl = gsap.timeline({
+        scrollTrigger:{
+            trigger:"#about",
+            scroller:"body",
+            start:"top 40%",
+            end:"top 10%",
+            scrub:2,
+            markers:"true"
+        }
+    })  
 
+    tl.from("#about .boldText",{
+        x:500,
+        y:500,
+        scale:.2,
+        opacity:0,
+        duration:1,
+    })
+
+    tl.from("#about .svg3",{
+        x:100,
+        y:500,
+        scale:.2,
+        opacity:0,
+        duration:1,
+    })
+
+    tl.from("#about #about-part2",{
+        x:-500,
+        y:500,
+        scale:.2,
+        opacity:0,
+        duration:1,
+        stagger:.2,
+    })
+}
+
+var tl = gsap.timeline({
+        scrollTrigger:{
+            trigger:"#work",
+            scroller:"body",
+            start:"top 70%",
+            end:"top 20%",
+            scrub:2,
+            markers:"true"
+        }
+    })  
+
+    tl.from("#work #work1",{
+        x:500,
+        y:500,
+        scale:.2,
+        opacity:0,
+        duration:1,
+    })
+
+    tl.from("#work .svg5",{
+        scale:.2,
+        opacity:0,
+        duration:1,
+    })
+
+    tl.from("#work #work2",{
+        x:-500,
+        y:500,
+        scale:.2,
+        opacity:0,
+        duration:1,
+    })
+
+function digitalDesignAnim(){
+     var tl = gsap.timeline({
+        scrollTrigger:{
+            trigger:".digitalDesign",
+            scroller:"body",
+            start:"top 70%",
+            end:"top -20%",
+            scrub:2,
+            markers:"true"
+        }
+    })
+
+    tl.to(".digitalDesign",{
+        backgroundColor:"#212121",
+        duration:1,
+
+    })
+
+    tl.from(".digitalDesign .headingDD",{
+        x:500,
+        scale:0.2,
+        duration:3,
+        opacity:0,
+    })
+
+    tl.from(".row1 #image1",{
+        y:500,
+        opacity:0,
+        duration:1,
+    })
+
+    tl.from(".row1 #image2",{
+        y:500,
+        opacity:0,
+        duration:1,
+        delay:0.3,
+    })
+
+    tl.from(".row1 #image3",{
+        y:500,
+        opacity:0,
+        duration:1,
+        delay:0.4,
+    })
+
+    tl.from(".row1 #image4",{
+        y:500,
+        opacity:0,
+        duration:1,
+        delay:0.2,
+    })
+
+    tl.from(".row2 #image5",{
+        y:500,
+        opacity:0,
+        duration:1,
+    })
+
+    tl.from(".row2 #image6",{
+        y:500,
+        opacity:0,
+        duration:1,
+        delay:0.3,
+    })
+
+    tl.from(".row2 #image7",{
+        y:500,
+        opacity:0,
+        duration:1,
+        delay:0.2,
+    })
+
+    tl.from(".row2 #image8",{
+        y:500,
+        opacity:0,
+        duration:1,
+        delay:0.5,
+    })
+
+    tl.from(".row3 #image9",{
+        y:500,
+        opacity:0,
+        duration:1,
+    })
+
+    tl.from(".row3 #image10",{
+        y:500,
+        opacity:0,
+        duration:1,
+        delay:0.3,
+    })
+
+    tl.from(".row3 #image11",{
+        y:500,
+        opacity:0,
+        duration:1,
+        delay:0.2,
+    })
+
+    tl.from(".row3 #image12",{
+        y:500,
+        opacity:0,
+        duration:1,
+        delay:0.5,
+    })
+
+    document.querySelector("#image1 img").addEventListener("mouseenter", function() {
+        this.style.filter = "none";
+    });
+
+    document.querySelector("#image1 img").addEventListener("mouseleave", function() {
+        this.style.filter = "grayscale(100%)";
+    });
+
+    document.querySelector("#image2 img").addEventListener("mouseenter", function() {
+        this.style.filter = "none";
+    });
+
+    document.querySelector("#image2 img").addEventListener("mouseleave", function() {
+        this.style.filter = "grayscale(100%)";
+    });
+
+    document.querySelector("#image3 img").addEventListener("mouseenter", function() {
+        this.style.filter = "none";
+    });
+
+    document.querySelector("#image3 img").addEventListener("mouseleave", function() {
+        this.style.filter = "grayscale(100%)";
+    });
+
+    document.querySelector("#image4 img").addEventListener("mouseenter", function() {
+        this.style.filter = "none";
+    });
+
+    document.querySelector("#image4 img").addEventListener("mouseleave", function() {
+        this.style.filter = "grayscale(100%)";
+    });
+
+    document.querySelector("#image5 img").addEventListener("mouseenter", function() {
+        this.style.filter = "none";
+    });
+
+    document.querySelector("#image5 img").addEventListener("mouseleave", function() {
+        this.style.filter = "grayscale(100%)";
+    });
+
+    document.querySelector("#image6 img").addEventListener("mouseenter", function() {
+        this.style.filter = "none";
+    });
+
+    document.querySelector("#image6 img").addEventListener("mouseleave", function() {
+        this.style.filter = "grayscale(100%)";
+    });
+
+    document.querySelector("#image7 img").addEventListener("mouseenter", function() {
+        this.style.filter = "none";
+    });
+
+    document.querySelector("#image7 img").addEventListener("mouseleave", function() {
+        this.style.filter = "grayscale(100%)";
+    });
+
+    document.querySelector("#image8 img").addEventListener("mouseenter", function() {
+        this.style.filter = "none";
+    });
+
+    document.querySelector("#image8 img").addEventListener("mouseleave", function() {
+        this.style.filter = "grayscale(100%)";
+    });
+
+    document.querySelector("#image9 img").addEventListener("mouseenter", function() {
+        this.style.filter = "none";
+    });
+
+    document.querySelector("#image9 img").addEventListener("mouseleave", function() {
+        this.style.filter = "grayscale(100%)";
+    });
+
+    document.querySelector("#image10 img").addEventListener("mouseenter", function() {
+        this.style.filter = "none";
+    });
+
+    document.querySelector("#image10 img").addEventListener("mouseleave", function() {
+        this.style.filter = "grayscale(100%)";
+    });
+
+    document.querySelector("#image11 img").addEventListener("mouseenter", function() {
+        this.style.filter = "none";
+    });
+
+    document.querySelector("#image11 img").addEventListener("mouseleave", function() {
+        this.style.filter = "grayscale(100%)";
+    });
+
+    document.querySelector("#image12 img").addEventListener("mouseenter", function() {
+        this.style.filter = "none";
+    });
+
+    document.querySelector("#image12 img").addEventListener("mouseleave", function() {
+        this.style.filter = "grayscale(100%)";
+    });
+}
 
     
+
+
+
+
     
 
 
 topTextAnim()
 middleTextAnim()
 bottomTextAnim()
+aboutPageAnim()
+digitalDesignAnim()
