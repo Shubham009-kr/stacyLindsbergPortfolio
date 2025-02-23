@@ -398,3 +398,51 @@ img {
     filter: grayscale(100%);
     transition: filter 0.3s ease-in-out;
 }
+
+.text-demo{
+    position: relative;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+}
+
+.text-demo p{
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.text-revealer{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.text-revealer:after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.photoshoot{
+    width: 100%;
+    height: calc(150vh - 60px);
+    position: relative;
+}
+
+.imges{
+    width: 75px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    margin: 20px;
+}
+
+.imges img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

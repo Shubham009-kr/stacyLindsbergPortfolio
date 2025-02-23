@@ -616,7 +616,184 @@ function digitalDesignAnim(){
     });
 }
 
+gsap.registerPlugin(ScrollTrigger);
+
+var tl = gsap.timeline({
+        scrollTrigger:{
+            trigger:".photoshoot",
+            scroller:"body",
+            start:"top 70%",
+            end:"top 20%",
+            scrub:2,
+            markers:"true",
+            // onEnter: () => photoshootTriggerAnim(),
+        }
+    })  
+
+// // ScrollTrigger to trigger the function at 30% of the height of ".photoshoot"
+// ScrollTrigger.create({
+//     trigger: ".photoshoot",
+//     scroller: "body",
+//     start: "top 70%", // Adjust based on when you want the function to trigger
+//     onEnter: () => photoshootTriggerAnim() // Calls the function when scrolled to 30% height
+// });
+
+ScrollTrigger.create({
+    trigger: ".photoshoot",
+    scroller: "body",
+    start: "top 70%", 
+    onEnter: () => {
+        setTimeout(() => {
+            photoshootTriggerAnim();
+        }, 100); // Small delay ensures proper execution
+    }
+});
+
+// function photoshootTriggerAnim() {
+//     console.log("Photoshoot animation triggered!");
+//     // Your animation logic here
+// }
+
+function photoshootTriggerAnim(){
+
+    const positions = [
+    { top: "0%", left: "0%" },
+    { top: "0%", left: "10%" },
+    { top: "0%", left: "60%" },
+    { top: "16%", left: "15%" },
+    { top: "16%", left: "40%" },
+    { top: "32%", left: "50%" },
+    { top: "48%", left: "0%" },
+    { top: "64%", left: "90%" },
+    { top: "80%", left: "20%" },
+    { top: "80%", left: "70%" },
+    { top: "65%", left: "62%" },
+    { top: "50%", left: "40%" },
+    { top: "42%", left: "68%" },
+    { top: "70%", left: "78%" },
+    { top: "350%", left: "90%" },
+]
+    const imges = document.querySelectorAll(".imges");
+gsap.set(".imges",{
+    top: "45%",
+    left: "50%",
+    transform: "translate(-50%, -50%) scale(0)",
+})
+
+gsap.from(".text-demo p", {
+    y:40,
+    ease:"power4.inOut",
+    duration:1,
+    stagger:{
+        amount:0.15,
+    },
+    delay:0.5,
+})
+
+gsap.to(".imges",{
+    scale:1,
+    width:"300px",
+    height:"400px",
+    stagger:0.15,
+    duration:0.75,
+    ease:"power2.out",
+    delay:1,
+    onComplete: scatterAndShrink,
+})
+
+gsap.to(".text-demo p",{
+    top:"40px",
+    ease:"power4.inOut",
+    duration:1,
+    stagger:{
+        amount:0.15,
+    },
+    delay:3,
+})
+
+function scatterAndShrink(){
+    gsap.to(".imges",{
+        top:(i) => positions[i].top,
+        left:(i) => positions[i].left,
+        transform:"none",
+        width:"75px",
+        height:"100px",
+        stagger:0.075,
+        duration:0.75,
+        ease:"power2.out",
+    })
+}
+
+function applyBlurEffect(){
+    const elementsToBlur = document.querySelectorAll('.text-demo, .imges:not([data-enlarged="true"])');
+    gsap.to(elementsToBlur,{
+        filter:'blur(20px)',
+        duration:0.75,
+        ease:"power2.out"
+    });
+}
+
+function removeBlurEffect(){
+    const elementsToBlur = document.querySelectorAll('.text-demo, .imges:not([data-enlarged="true"])');
+    gsap.to(elementsToBlur,{
+        filter:'blur(0px)',
+        duration:1,
+        ease:"power2.out"
+    });
+}
+
+function toggleImageSize(event){
+    const img = event.currentTarget;
+    const isEnlarged = img.getAttribute('data-enlarged') === 'true';
+    const originalPosition = JSON.parse(img.getAttribute('data-original-position'));
+    const viewPortWidth = window.innerWidth;
+    const viewPortHeight = window.innerHeight;
+
+    if(!isEnlarged){
+        const enlargedWidth = 500;
+        const enlargedHeight = 600;
+        const centeredLeft = (viewPortWidth - enlargedWidth) / 2;
+        const centeredTop = (viewPortHeight - enlargedHeight) / 2;
+        const topCorrection = 75;
+        const correctedTop = centeredTop - topCorrection;
+
+        gsap.to(img,{
+            zIndex: 1000,
+            top: centeredTop + 'px',
+            left: centeredLeft + 'px',
+            width: enlargedWidth + 'px',
+            height: enlargedHeight + 'px',
+            ease:"power4.out",
+            duration:1,
+        });
+
+        img.setAttribute('data-enlarged', 'true');
+        applyBlurEffect();
+    }else{
+        setTimeout(()=>removeBlurEffect(), 100);
+
+        gsap.to(img,{
+            zIndex: 1,
+            top: originalPosition.top,
+            left: originalPosition.left,
+            width: '75px',
+            height: '100px',
+            ease:"power4.out",
+            duration:1,
+        });     
+        img.setAttribute('data-enlarged', 'false');   
+    }
+}
+
+imges.forEach((img, i) => {
+    img.setAttribute('data-original-position', JSON.stringify(positions[i]));
+    img.setAttribute('data-enlarged', 'false');
+    img.addEventListener('click', toggleImageSize);
+})
     
+}
+
+
 
 
 
@@ -629,3 +806,4 @@ middleTextAnim()
 bottomTextAnim()
 aboutPageAnim()
 digitalDesignAnim()
+// photoshootTriggerAnim()
