@@ -626,17 +626,9 @@ var tl = gsap.timeline({
             end:"top 20%",
             scrub:2,
             markers:"true",
-            // onEnter: () => photoshootTriggerAnim(),
         }
     })  
 
-// // ScrollTrigger to trigger the function at 30% of the height of ".photoshoot"
-// ScrollTrigger.create({
-//     trigger: ".photoshoot",
-//     scroller: "body",
-//     start: "top 70%", // Adjust based on when you want the function to trigger
-//     onEnter: () => photoshootTriggerAnim() // Calls the function when scrolled to 30% height
-// });
 
 ScrollTrigger.create({
     trigger: ".photoshoot",
@@ -648,11 +640,6 @@ ScrollTrigger.create({
         }, 100); // Small delay ensures proper execution
     }
 });
-
-// function photoshootTriggerAnim() {
-//     console.log("Photoshoot animation triggered!");
-//     // Your animation logic here
-// }
 
 function photoshootTriggerAnim(){
 
@@ -671,7 +658,7 @@ function photoshootTriggerAnim(){
     { top: "50%", left: "40%" },
     { top: "42%", left: "68%" },
     { top: "70%", left: "78%" },
-    { top: "350%", left: "90%" },
+    { top: "35%", left: "90%" },
 ]
     const imges = document.querySelectorAll(".imges");
 gsap.set(".imges",{
@@ -793,6 +780,63 @@ imges.forEach((img, i) => {
     
 }
 
+function architectDesignAnim(){
+    const galleryContainer = document.querySelector(".gallr");
+const galleryItem = galleryContainer.querySelectorAll(".gallr-item");
+const indicat = document.querySelector(".indicator");
+
+const defalutItemFlex = "0 1 20px";
+const hoverItemFlex = "1 1 400px";
+
+const updateGalleryItems = () => {
+    galleryItem.forEach((item) =>{
+        let flex = defalutItemFlex;
+        
+        if(item.isHovered){
+            flex = hoverItemFlex;
+        }
+
+        item.style.flex = flex;
+    });
+};
+
+galleryItem[0].isHovered = true;
+updateGalleryItems();
+
+galleryItem.forEach((item) => {
+    item.addEventListener("mouseenter", ()=>{
+        galleryItem.forEach((otherItem)=>{
+            otherItem.isHovered = otherItem === item;
+        });
+
+        updateGalleryItems();
+    });
+});
+
+galleryContainer.addEventListener("mousemove", (e)=>{
+    indicat.style.left = `${
+        e.clientX - galleryContainer.getBoundingClientRect().left
+    }px`;
+})
+
+var tl = gsap.timeline({
+        scrollTrigger:{
+            trigger:".architectDesign",
+            scroller:"body",
+            start:"top 70%",
+            end:"top 50%",
+            scrub:2,
+            markers:"true"
+        }
+    })
+
+    tl.to(".architectDesign",{
+        backgroundColor:"#212121",
+        duration:1,
+
+    })
+}
+
 
 
 
@@ -806,4 +850,5 @@ middleTextAnim()
 bottomTextAnim()
 aboutPageAnim()
 digitalDesignAnim()
+architectDesignAnim()
 // photoshootTriggerAnim()

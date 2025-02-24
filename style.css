@@ -429,8 +429,18 @@ img {
 
 .photoshoot{
     width: 100%;
-    height: calc(150vh - 60px);
+    height: calc(120vh - 60px);
     position: relative;
+}
+
+.textBgPhH1{
+    font-size: 10rem;
+    z-index: -100;
+    font-family: "Gllasken";
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    mix-blend-mode: difference;
 }
 
 .imges{
@@ -445,4 +455,71 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.architectDesign{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.archiText{
+    font-size: 5rem;
+    font-family: "Gllasken";
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    width: 1000px;
+    margin: 0 auto 2em auto;
+    padding: 1em 0.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.indicator{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 100%;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.gallr{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallr-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 20px;
+    height: 400px;
+    margin: 0 5px;
+    background: #000;
+    overflow: hidden;
+    transition: flex 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: relative;
+}
+
+.gallr-item img{
+    width: 800px;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
 }
