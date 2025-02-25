@@ -426,7 +426,7 @@ function digitalDesignAnim(){
     })
 
     tl.to(".digitalDesign",{
-        backgroundColor:"#212121",
+        backgroundColor:"#0d0d0d",
         duration:1,
 
     })
@@ -629,7 +629,6 @@ var tl = gsap.timeline({
         }
     })  
 
-
 ScrollTrigger.create({
     trigger: ".photoshoot",
     scroller: "body",
@@ -831,19 +830,54 @@ var tl = gsap.timeline({
     })
 
     tl.to(".architectDesign",{
-        backgroundColor:"#212121",
+        backgroundColor:"#0d0d0d",
         duration:1,
-
     })
 }
 
+function interactionDesignAnim(){
+    var tl = gsap.timeline({
+        scrollTrigger:{
+            trigger:".interactionDesign",
+            scroller:"body",
+            start:"top 70%",
+            end:"top 50%",
+            scrub:2,
+            markers:"true"
+        }
+    })
+
+    tl.from(".interaction",{
+        x:-200,
+        duration:1,
+        delay:0.5,
+        opacity:0
+    })
+
+    tl.from(".motion",{
+        x:200,
+        duration:1,
+        delay:0.5,
+        opacity:0
+    })
+
+    tl.from(".itr-vid",{
+        x:-200,
+        duration:1,
+        delay:0.5,
+        opacity:0
+    })
+
+    tl.from(".mtn-vid",{
+        x:200,
+        duration:1,
+        delay:0.5,
+        opacity:0
+    })
 
 
+}
 
-
-
-
-    
 
 
 topTextAnim()
@@ -852,4 +886,5 @@ bottomTextAnim()
 aboutPageAnim()
 digitalDesignAnim()
 architectDesignAnim()
+interactionDesignAnim()
 // photoshootTriggerAnim()
