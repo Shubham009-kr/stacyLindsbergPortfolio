@@ -539,7 +539,8 @@ img {
 }
 
 .testimonial{
-    
+    height: 110vh;
+    width: 100%;
 }
 
 .marquee{
@@ -583,4 +584,59 @@ img {
 .marquee-part i.active{
     transform: rotate(0deg);
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.testi{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0vh 5vw;
+}
+
+.testi-head{
+    font-size: 3.5rem;
+    font-family: "Gllasken";
+    text-align: center;
+    padding: 1vh 3vw;
+    padding-top: 8vh;
+}
+
+.underline{
+    background-color: #0d0d0d;
+    width: 0px;
+    height: 2px;
+    text-align: center;
+    position: relative;
+    left: 36%;
+    opacity: 0;
+}
+
+.p-one{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3vh 3.5vw;
+}
+
+.p-one h1{
+    font-size: 2.2rem;
+    font-weight: 600;
+    font-family: "Gllasken";
+    padding: 0 2vw;
+}
+
+.p-one h2{
+    font-size: 1.2rem;
+    font-style: italic;
+    text-transform: lowercase;
+    font-weight: 500;
+    padding: 0 3vw;
+}
+
+.p-one p{
+    font-size: 1.1rem;
+    font-weight: 500;
 }

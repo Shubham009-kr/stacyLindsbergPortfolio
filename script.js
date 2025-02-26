@@ -878,7 +878,8 @@ function interactionDesignAnim(){
 
 }
 
-let currentScroll = 0;
+function testimonialAnim(){
+    let currentScroll = 0;
 let isScrollDown = true;
 let arrows = document.querySelectorAll(".marquee-part i");
 
@@ -913,6 +914,49 @@ window.addEventListener("scroll", function(){
     currentScroll = this.window.scrollY;
 })
 
+let testi = document.querySelectorAll(".p-one");
+let testiHead = document.querySelector(".testi-head");
+
+testi.forEach((test) => {
+    test.addEventListener("mouseenter", function(){
+        gsap.to(test,{
+            backgroundColor:"#0d0d0d",
+            color:"white",
+            duration:.5,
+            scaleX:1.05,
+            borderRadius:"0px 100px 0px 100px",
+        })
+    })
+
+    test.addEventListener("mouseleave", function(){
+        gsap.to(test,{
+            backgroundColor:"white",
+            color:"#0d0d0d",
+            duration:.5,
+            scaleX:1,
+            borderRadius:"0px 0px 0px 0px",
+        })
+    })
+})
+
+testiHead.addEventListener("mouseenter", function(){
+    gsap.to(".underline",{
+        opacity:1,
+        width:"430px",
+        duration:.8,
+    })
+})
+
+testiHead.addEventListener("mouseleave", function(){
+    gsap.to(".underline",{
+        opacity:0,
+        width:"0px",
+        duration:.8,
+    })
+})
+
+
+}
 
 
 topTextAnim()
@@ -922,4 +966,5 @@ aboutPageAnim()
 digitalDesignAnim()
 architectDesignAnim()
 interactionDesignAnim()
+testimonialAnim()
 // photoshootTriggerAnim()
