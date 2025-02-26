@@ -537,3 +537,50 @@ img {
     height: 500px;
     width: 600px;
 }
+
+.testimonial{
+    
+}
+
+.marquee{
+    position: relative;
+    background-color: #0f0f0f;
+    color: #eee;
+    padding: 30px 0px;
+    overflow: hidden;
+    font-size: 2.2rem;
+}
+
+.marquee h1{
+    font-weight: 600;
+        font-family: "Gllasken";
+        text-transform: uppercase;
+}
+
+.marquee-inner{
+    display: flex;
+    width: fit-content;
+    flex: auto;
+    flex-direction: row;
+}
+
+.marquee-part{
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 4px;
+}
+
+.marquee-part i{
+    width: 60px;
+    height: 80px;
+    font-size: 5rem;
+    margin: 0 1em;
+    transform: rotate(-180deg);
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.marquee-part i.active{
+    transform: rotate(0deg);
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}

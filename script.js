@@ -878,6 +878,41 @@ function interactionDesignAnim(){
 
 }
 
+let currentScroll = 0;
+let isScrollDown = true;
+let arrows = document.querySelectorAll(".marquee-part i");
+
+let tween = gsap.to(".marquee-part",{
+    xPercent:-100,
+    repeat:-1,
+    duration:5,
+    ease:"linear",
+}).totalProgress(-1);
+
+gsap.set(".marquee-inner",{ xPercent:-50 });
+
+window.addEventListener("scroll", function(){
+    if(this.window.scrollY > currentScroll){
+        isScrollDown = true;
+    }else{
+        isScrollDown = false;
+    }
+
+    gsap.to(tween, {
+        timeScale: isScrollDown ? 1:-1,
+    });
+
+    arrows.forEach((arrow) => {
+        if(isScrollDown){
+            arrow.classList.remove("active");
+        }else{
+            arrow.classList.add("active");
+        }
+    });
+
+    currentScroll = this.window.scrollY;
+})
+
 
 
 topTextAnim()
