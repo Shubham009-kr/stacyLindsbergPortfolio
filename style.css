@@ -29,7 +29,7 @@ html, body {
 header{
     height: 100vh;
     width: 100%;
-    background-color: #0d0d0d;
+    /* background-color: #0d0d0d; */
     color: white;
 }
 
@@ -639,4 +639,112 @@ img {
 .p-one p{
     font-size: 1.1rem;
     font-weight: 500;
+}
+
+footer{
+    height: 130vh;
+    width: 100%;
+    background-color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+.card{
+    height:25%;
+    width: 100%;
+    /* background-color: bisque; */
+    padding: 3.5vh 2vw;
+}
+
+.card-body{
+    width: 100%;
+    background-color: white;
+    height: 100%;
+    border: 2px solid white;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: .2rem;
+    padding: 0vh 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #0d0d0d;
+}
+
+.first-cate, .second-cate{
+    width: 30%;
+    border-right: 1px solid black;
+}
+
+.first-cate h1, .second-cate h1, .third-cate h1{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.first-cate p, .second-cate p, .third-cate p {
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.third-cate {
+    width: 30%;
+}
+
+.details{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh 7vw;
+    /* background-color: aquamarine; */
+}
+
+.left-text h1{
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.left-text h2{
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Nothern";
+}
+
+.middle-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.middle-text h3{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.middle-text h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.bold-text{
+    width: 100%;
+    height: 35%;
+    text-align: center;
+    /* background-color: beige; */
+}
+
+.lowestBText{
+    font-size: 20rem;
+    font-weight: 700;
+    font-family: "Nothern";
+    position: relative;
+    /* background-color: aqua; */
+    bottom: 0px;
 }
