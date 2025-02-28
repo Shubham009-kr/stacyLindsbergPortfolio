@@ -958,6 +958,106 @@ testiHead.addEventListener("mouseleave", function(){
 
 }
 
+function footerAnim(){
+    var tl = gsap.timeline({
+        scrollTrigger:{
+            trigger:"footer",
+            scroller:"body",
+            start:"top 60%",
+            end:"top 10%",
+            scrub:2,
+            markers:"true"
+        }
+    })
+
+    tl.from(".card-body",{
+        backgroundColor:"#0d0d0d",
+        duration:1,
+        delay:0.5,
+        opacity:0
+    })
+
+    tl.from(".first-cate",{
+        x:-200,
+        duration:1,
+        delay:0.5,
+        opacity:0
+    })
+
+    tl.from(".second-cate",{
+        y:200,
+        duration:1,
+        delay:0.5,
+        opacity:0
+    })
+
+    tl.from(".third-cate",{
+        x:200,
+        duration:1,
+        delay:0.5,
+        opacity:0
+    })
+
+    tl.from(".left-text h1",{
+        x:-200,
+        duration:1,
+        delay:0.5,
+        opacity:0,
+        fontStyle:"none",
+    })
+
+    tl.from(".left-text h2",{
+        x:-200,
+        duration:1,
+        delay:0.5,
+        opacity:0,
+        fontStyle:"italic",
+    })
+
+    tl.from(".top-sec h3",{
+        y:40,
+        duration:1.2,
+        delay:0.5,
+        opacity:0,
+        stagger:0.2,
+    })
+
+    tl.from(".bottom-sec h2, .bottom-sec h3",{
+        y:40,
+        duration:1.2,
+        delay:0.5,
+        opacity:0,
+        stagger:0.2,
+    })
+
+    tl.from(".lowestBText",{
+        y:200,
+        duration:.5,
+        delay:0.5,
+        opacity:0,
+    })
+
+    var lowestBText = document.querySelector(".lowestBText");
+    lowestBText.addEventListener("mouseenter", function(){
+        gsap.to(lowestBText, {
+            y:20,
+            duration:.5,
+            delay:0.2,
+            opacity:1,
+            letterSpacing:0,
+            left:"25%",
+        })
+    })
+    lowestBText.addEventListener("mouseleave", function(){
+        gsap.to(lowestBText, {
+            y:0,
+            duration:.5,
+            opacity:.5,
+            letterSpacing:"80px",
+            left:"13%"
+        })
+    })
+}
 
 topTextAnim()
 middleTextAnim()
@@ -967,4 +1067,5 @@ digitalDesignAnim()
 architectDesignAnim()
 interactionDesignAnim()
 testimonialAnim()
+footerAnim()
 // photoshootTriggerAnim()

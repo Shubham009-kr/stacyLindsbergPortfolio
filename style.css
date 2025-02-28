@@ -655,7 +655,6 @@ footer{
 .card{
     height:25%;
     width: 100%;
-    /* background-color: bisque; */
     padding: 3.5vh 2vw;
 }
 
@@ -664,7 +663,6 @@ footer{
     background-color: white;
     height: 100%;
     border: 2px solid white;
-    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: .2rem;
     padding: 0vh 3vw;
@@ -700,7 +698,6 @@ footer{
     display: flex;
     justify-content: space-between;
     padding: 3vh 7vw;
-    /* background-color: aquamarine; */
 }
 
 .left-text h1{
@@ -737,14 +734,15 @@ footer{
     width: 100%;
     height: 35%;
     text-align: center;
-    /* background-color: beige; */
+    position: relative;
 }
 
 .lowestBText{
     font-size: 20rem;
     font-weight: 700;
     font-family: "Nothern";
-    position: relative;
-    /* background-color: aqua; */
-    bottom: 0px;
+    position: absolute;
+    left: 13%;
+    opacity: 0.5;
+    letter-spacing: 80px;
 }
