@@ -350,7 +350,6 @@ function aboutPageAnim(){
             start:"top 40%",
             end:"top 10%",
             scrub:2,
-            markers:"true"
         }
     })  
 
@@ -387,7 +386,6 @@ var tl = gsap.timeline({
             start:"top 70%",
             end:"top 20%",
             scrub:2,
-            markers:"true"
         }
     })  
 
@@ -421,7 +419,6 @@ function digitalDesignAnim(){
             start:"top 70%",
             end:"top -20%",
             scrub:2,
-            markers:"true"
         }
     })
 
@@ -625,7 +622,6 @@ var tl = gsap.timeline({
             start:"top 70%",
             end:"top 20%",
             scrub:2,
-            markers:"true",
         }
     })  
 
@@ -825,7 +821,6 @@ var tl = gsap.timeline({
             start:"top 70%",
             end:"top 50%",
             scrub:2,
-            markers:"true"
         }
     })
 
@@ -843,7 +838,6 @@ function interactionDesignAnim(){
             start:"top 70%",
             end:"top 50%",
             scrub:2,
-            markers:"true"
         }
     })
 
@@ -966,7 +960,6 @@ function footerAnim(){
             start:"top 60%",
             end:"top 10%",
             scrub:2,
-            markers:"true"
         }
     })
 
