@@ -946,6 +946,7 @@ testiHead.addEventListener("mouseleave", function(){
         opacity:0,
         width:"0px",
         duration:.8,
+        
     })
 })
 
