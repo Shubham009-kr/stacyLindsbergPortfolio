@@ -876,7 +876,6 @@ function testimonialAnim(){
     let currentScroll = 0;
 let isScrollDown = true;
 let arrows = document.querySelectorAll(".marquee-part i");
-
 let tween = gsap.to(".marquee-part",{
     xPercent:-100,
     repeat:-1,
@@ -946,7 +945,6 @@ testiHead.addEventListener("mouseleave", function(){
         opacity:0,
         width:"0px",
         duration:.8,
-        
     })
 })
 
